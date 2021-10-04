@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  tests:
+    build: .
+    image: pytest_runner
+    container_name: pytest_runner_container
+    environment:
+      - ENV=dev
+    volumes:
+      - .:/tests_project/
